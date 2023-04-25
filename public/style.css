@@ -98,12 +98,13 @@ body {
   padding: 8px;
   font-family: inherit;
   background-color: var(--surface);
+  resize: none;
 }
 
 .TextField__button {
   all: unset;
   background-color: var(--primary);
-  padding: 16px;
+  padding: 12px;
   border-radius: 8px;
   height: 24px;
   width: 24px;
