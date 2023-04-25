@@ -35,6 +35,10 @@ body {
   ); /* - logo margin - logo font-size */
 }
 
+.Wrapper {
+  height: 100%;
+}
+
 .Logo {
   font-size: clamp(1.7rem, 7vw, 3rem);
   margin-bottom: 16px;

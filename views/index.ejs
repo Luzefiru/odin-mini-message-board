@@ -6,42 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message Board</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./animation.css" />
   </head>
   <body>
-    <h1 class="Logo">Express<span class="Logo__color">.js</span> Yourself</h1>
-    <main class="App">
-      <% messages.forEach(e => { %>
-      <article class="Card">
-        <div class="Card__text"><%= e.text %></div>
-        <div class="Card__meta">
-          <div class="Card__meta__date"><%= e.added.toLocaleString() %></div>
-          <div class="Card__meta__user">— <%= e.user %></div>
-        </div>
-      </article>
-      <% }) %>
-      <form class="TextField" method="post" action="/new">
-        <textarea
-          class="TextField__input"
-          id="message"
-          name="message"
-          type="text"
-          placeholder="Be part of the community! Send a message."
-          required
-        ></textarea>
-        <button class="TextField__button" type="submit">
-          <svg
-            class="TextField__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <title>email</title>
+    <div class="Wrapper">
+      <h1 class="Logo">Express<span class="Logo__color">.js</span> Yourself</h1>
+      <div class="SpinningText">
+        <svg
+          id="SpinningText__outer"
+          viewBox="0 0 200 200"
+          width="250"
+          height="250"
+        >
+          <defs>
             <path
-              fill="currentColor"
-              d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-            />
-          </svg>
-        </button>
-      </form>
-    </main>
+              id="circle"
+              d="M 100, 100
+                  m -75, 0
+                  a 75, 75 0 1, 0 150, 0
+                  a 75, 75 0 1, 0 -150, 0
+                  "
+            ></path>
+          </defs>
+          <text width="400">
+            <textPath
+              alignment-baseline="top"
+              xlink:href="#circle"
+              class="SpinningText__text --outer"
+            >
+              An idiot admires complexity
+            </textPath>
+          </text>
+        </svg>
+        <svg
+          id="SpinningText__inner"
+          viewBox="0 0 200 200"
+          width="175"
+          height="175"
+        >
+          <defs>
+            <path
+              id="circle"
+              d="M 100, 100
+                  m -75, 0
+                  a 75, 75 0 1, 0 150, 0
+                  a 75, 75 0 1, 0 -150, 0
+                  "
+            ></path>
+          </defs>
+          <text width="400">
+            <textPath
+              alignment-baseline="top"
+              xlink:href="#circle"
+              class="SpinningText__text"
+            >
+              while a genius appreciates simplicity
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <main class="App">
+        <% messages.forEach(e => { %>
+        <article class="Card">
+          <div class="Card__text"><%= e.text %></div>
+          <div class="Card__meta">
+            <div class="Card__meta__date"><%= e.added.toLocaleString() %></div>
+            <div class="Card__meta__user">— <%= e.user %></div>
+          </div>
+        </article>
+        <% }) %>
+        <form class="TextField" method="post" action="/new">
+          <textarea
+            class="TextField__input"
+            id="message"
+            name="message"
+            type="text"
+            placeholder="Be part of the community! Send a message."
+            required
+          ></textarea>
+          <button class="TextField__button" type="submit">
+            <svg
+              class="TextField__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <title>email</title>
+              <path
+                fill="currentColor"
+                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+              />
+            </svg>
+          </button>
+        </form>
+      </main>
+    </div>
   </body>
 </html>
