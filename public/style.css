@@ -9,13 +9,13 @@
 :root {
   --background: #131312;
   --background-lighter: #1b1a1b;
-  --surface: rgb(214, 210, 217);
+  --surface: rgb(239, 236, 241);
   --text-dark: rgb(244, 244, 244);
   --text-light: rgb(8, 8, 8);
   --subtext: rgb(147, 144, 154);
 
   --primary: #6301ee;
-  --primary-alt: #23036a;
+  --primary-alt: #37108d;
   --secondary: #995efe;
   --secondary-alt: #7e38fb;
 }
@@ -80,4 +80,40 @@ body {
   justify-self: end;
   font-weight: 500;
   color: var(--primary);
+}
+
+.TextField {
+  margin-top: auto;
+  display: flex;
+  gap: 16px;
+}
+
+.TextField__input {
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: inherit;
+  background-color: var(--surface);
+}
+
+.TextField__button {
+  all: unset;
+  background-color: var(--primary);
+  padding: 16px;
+  border-radius: 8px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  place-items: center;
+  cursor: pointer;
+}
+
+.TextField__button:hover {
+  background-color: var(--primary-alt);
+}
+
+.TextField__icon {
+  color: var(--text-dark);
+  height: 32px;
+  width: 32px;
 }
