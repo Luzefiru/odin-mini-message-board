@@ -9,3 +9,5 @@ app.set('view engine', 'ejs');
 // Routers
 const indexRouter = require('./routes/index.js');
 app.use(indexRouter);
+// Middleware
+app.use(express.static('public'));

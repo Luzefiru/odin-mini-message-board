@@ -5,8 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message Board</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Message Board</h1>
+    <h1 class="Logo">Express<span class="Logo__color">.js</span> Yourself</h1>
+    <main class="App">
+      <% messages.forEach(e => { %>
+      <article class="Card">
+        <div class="Card__text"><%= e.text %></div>
+        <div class="Card__meta">
+          <div class="Card__meta__date"><%= e.added.toLocaleString() %></div>
+          <div class="Card__meta__user">— <%= e.user %></div>
+        </div>
+      </article>
+      <% }) %>
+    </main>
   </body>
 </html>

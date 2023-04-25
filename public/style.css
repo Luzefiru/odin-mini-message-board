@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #131312;
+  --background-lighter: #1b1a1b;
+  --surface: rgb(214, 210, 217);
+  --text-dark: rgb(244, 244, 244);
+  --text-light: rgb(8, 8, 8);
+  --subtext: rgb(147, 144, 154);
+
+  --primary: #6301ee;
+  --primary-alt: #23036a;
+  --secondary: #995efe;
+  --secondary-alt: #7e38fb;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  padding: 10%;
+  padding-top: calc(
+    10% - 32px - min(7vw, 3rem)
+  ); /* - logo margin - logo font-size */
+}
+
+.Logo {
+  font-size: clamp(1.7rem, 7vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.Logo__color {
+  color: var(--primary);
+}
+
+.App {
+  background-color: var(--background-lighter);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--text-light);
+  height: 100%;
+}
+
+.Card {
+  background: var(--surface);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.Card__text {
+  font-size: 2rem;
+}
+
+.Card__meta {
+  justify-self: flex-end;
+  margin-left: auto;
+  display: grid;
+}
+
+.Card__meta__date {
+  color: var(--subtext);
+}
+
+.Card__meta__user {
+  justify-self: end;
+  font-weight: 500;
+  color: var(--primary);
+}
