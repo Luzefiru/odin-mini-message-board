@@ -1,8 +1,8 @@
 // Server Initialization
 const express = require('express');
 const app = express();
-app.listen(8000, () => {
-  console.log(`Now listening on http://localhost:8000`);
+app.listen(10000, () => {
+  console.log(`Now listening on http://localhost:10000`);
 });
 
 // Server Settings

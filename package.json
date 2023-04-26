@@ -4,6 +4,7 @@
   "description": "A mini-message board built with Express.js and the EJS templating engine.",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "repository": {
