@@ -1,6 +1,6 @@
 # odin-mini-message-board
 
-A mini-message board built with Express.js and the EJS templating engine.
+A mini-message board built with Express.js and the EJS templating engine, deployed with a Platform as a Service (PaaS).
 
 # Deploying on [Render.com](render.com)
 
